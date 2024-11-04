@@ -17,7 +17,7 @@ public class CounttheWords {
 		
 		for(int i=0; i<arr.length; i++) {
 		
-			m.put(arr[i], m.getOrDefault(arr[i], 0) + 1);
+			m.put(arr[i], m.getOrDefault(arr[i],0) + 1);
 				
 	 }
 		
