@@ -1,39 +1,38 @@
-package java_project;
-
-import java.util.Scanner;
+package javaprograms;
 
 public class ArmstrongNumber {
-	
+
 	public static void main(String[] args) {
-		int result;
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the number");
-		
-		int n = sc.nextInt();
-		String s="";
-		
-		char ch[] = String.valueOf(n).toCharArray();
-		 System.out.println(ch);
-		 
-		for(int i=0; i<=ch.length; i++) {
-			 
-			 
-			result= (int)Math.pow(i, 3);
-			
-			s+=result;
-			
-			
-		 
-		 }
-		
-		System.out.println(s);
-		
-		
-		
-		
-		
-		
-		
+
+		int num = 153;
+		int sum = 0;
+
+		int num1 = num;
+
+		String st = String.valueOf(num1);
+
+		for (int i = 0; i < st.length(); i++) {
+
+			int v = num1 % 10;
+
+			num1 = num1 / 10;
+
+			int va = (int) Math.pow(v, st.length());
+
+			sum = sum + va;
+
+		}
+
+		System.out.println(sum);
+
+		if (num == sum) {
+
+			System.out.println("it is a armstrong number");
+		} else {
+
+			System.out.println("It is not an armstrong number");
+		}
+
 	}
 
 }

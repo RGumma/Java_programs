@@ -1,28 +1,30 @@
-package java_project;
-
-import java.util.Scanner;
+package javaprograms;
 
 public class CounttheDigits {
 
 	public static void main(String[] args) {
 
+		int num = 5143;
+
+		int v;
+
 		int count = 0;
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the number");
-		int num1 = sc.nextInt();
-		char ch[] = String.valueOf(num1).toCharArray();
-		System.out.println(ch.length);
-		for (int i = 0; i<ch.length; i++) {
-			if (Character.isDigit(ch[i])) {
 
-				count = count + 1;
+		String va = String.valueOf(num);
 
-			}
+		for (int i = 0; i < va.length(); i++) {
+
+			v = num % 10;
+
+			num = num / 10;
+
+			count = count + 1;
+
+			
 
 		}
 
-	
-	   System.out.println(count);
+		System.out.println(count);
 	}
 
 }
